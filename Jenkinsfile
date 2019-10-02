@@ -16,7 +16,7 @@ pipeline {
                  stage('Transfer of jar to server') {
                  steps {
                        sh 'touch a.jar'
-		       sh 'cp a.jar/tmp'
+		       sh 'cp a.jar /tmp'
                  }
                  }
                  
