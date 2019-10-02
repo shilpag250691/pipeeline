@@ -4,19 +4,19 @@ pipeline {
                  stage('Git Step') {
                  steps {
                      echo 'This is my GitStep'
-		     sh git --version
+		     sh 'git --version'
                  }
                  }
                  stage('Maven') {
                  steps {
                     echo 'This is my MavenStep'
-		    sh mvn --version
+		    sh 'mvn --version'
                  }
                  }
                  stage('Transfer of jar to server') {
                  steps {
-                       touch a.jar
-		       cp a.jar/tmp
+                       sh 'touch a.jar'
+		       sh 'cp a.jar/tmp'
                  }
                  }
                  
